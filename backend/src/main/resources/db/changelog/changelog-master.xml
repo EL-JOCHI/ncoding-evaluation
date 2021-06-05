@@ -9,4 +9,5 @@
     <include file="changes/0003-changelog-create-course-table.xml" relativeToChangelogFile="true" />
     <include file="changes/0004-changelog-create-enrollment-table.xml" relativeToChangelogFile="true" />
     <include file="changes/0005-changelog-populate-courses.xml" relativeToChangelogFile="true" />
+    <include file="changes/0006-changelog-add-available-in-courses.xml" relativeToChangelogFile="true" />
 </databaseChangeLog>

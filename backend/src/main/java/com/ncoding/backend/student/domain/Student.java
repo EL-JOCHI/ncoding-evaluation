@@ -5,7 +5,9 @@ import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Getter
@@ -22,10 +24,14 @@ public class Student extends Audit {
 
     @NotNull
     @Column(name = "first_name", nullable = false)
+    @NotBlank
+    @Size(max=255)
     private String firstName;
 
     @NotNull
     @Column(name = "last_name", nullable = false)
+    @NotBlank
+    @Size(max=255)
     private String lastName;
 
     @Column(name = "mobile_number")
@@ -37,12 +43,6 @@ public class Student extends Audit {
     @Override
     public String toString() {
         return String.format("[%s] %s %s", id, firstName, lastName);
-    }
-
-    public void updateDataWith(Student student) {
-        this.firstName = student.getFirstName();
-        this.lastName = student.getLastName();
-        this.mobileNumber = student.getMobileNumber();
     }
 
     @Override

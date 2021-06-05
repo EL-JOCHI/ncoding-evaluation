@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.Objects;
 
@@ -25,10 +28,15 @@ public class User extends Audit {
 
     @NotNull
     @Column(name = "email", nullable = false)
+    @NotBlank
+    @Email(message = "Please provide a valid email")
+    @Size(max = 255)
     private String email;
 
     @NotNull
     @Column(name = "password", nullable = false)
+    @NotBlank
+    @Size(max = 255)
     private String password;
 
     @Temporal(TemporalType.TIMESTAMP)
