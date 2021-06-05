@@ -1,12 +1,12 @@
-name;description;start_date;end_date;created_at;updated_at
-Java: First Steps;The OCP Oracle Certified Professional Java SE 11 Developer Complete Study Guide in an indispensable resource for anyone preparing for the certification exam.;2021-06-05 15:00:00;2021-06-18 18:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-2021 Complete Python Bootcamp From Zero to Hero in Python;Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-The Complete JavaScript Course 2021: From Zero to Expert!;The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-The Modern JavaScript Bootcamp;Learn JavaScript by building real-world apps. Includes 3 real-world projects, 80 programming challenges, and ES6/ES7!;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-AWS Certified Solutions Architect - Associate 2020;Want to pass the AWS Solutions Architect - Associate Exam? Want to become Amazon Web Services Certified? Do this course!;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-The Web Developer Bootcamp 2021;The only course you need to learn web development - HTML, CSS, JS, Node, and More!;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-Learn C# Programming (In Ten Easy Steps);The simplest way to learn C# programming.;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-Python Django - The Practical Guide;Learn how to build web applications and websites with Python and the Django framework;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-Flutter & Dart - The Complete Guide [2021 Edition];A Complete Guide to the Flutter SDK & Flutter Framework for building native iOS and Android apps;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-Complete Vue Mastery 2021 (w/ Vuex, Composition API, Router);Ultimate guide to Vue 3 Development! Build large scale applications and deploy to production. Go from Zero To Mastery!;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
-Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot;Learn to build distributed Event-driven Microservices, CQRS, Event Sourcing, SAGA, Transactions;2021-06-07 08:00:00;2021-06-25 12:00:00;2021-06-05 11:00:00;2021-06-05 11:00:00
+name;description;start_date;end_date
+Java: First Steps;The OCP Oracle Certified Professional Java SE 11 Developer Complete Study Guide in an indispensable resource for anyone preparing for the certification exam.;2021-06-05 15:00:00;2021-06-18 18:00:00
+2021 Complete Python Bootcamp From Zero to Hero in Python;Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games;2021-06-07 08:00:00;2021-06-25 12:00:00
+The Complete JavaScript Course 2021: From Zero to Expert!;The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!;2021-06-07 08:00:00;2021-06-25 12:00:00
+The Modern JavaScript Bootcamp;Learn JavaScript by building real-world apps. Includes 3 real-world projects, 80 programming challenges, and ES6/ES7!;2021-06-07 08:00:00;2021-06-25 12:00:00
+AWS Certified Solutions Architect - Associate 2020;Want to pass the AWS Solutions Architect - Associate Exam? Want to become Amazon Web Services Certified? Do this course!;2021-06-07 08:00:00;2021-06-25 12:00:00
+The Web Developer Bootcamp 2021;The only course you need to learn web development - HTML, CSS, JS, Node, and More!;2021-06-07 08:00:00;2021-06-25 12:00:00
+Learn C# Programming (In Ten Easy Steps);The simplest way to learn C# programming.;2021-06-07 08:00:00;2021-06-25 12:00:00
+Python Django - The Practical Guide;Learn how to build web applications and websites with Python and the Django framework;2021-06-07 08:00:00;2021-06-25 12:00:00
+Flutter & Dart - The Complete Guide [2021 Edition];A Complete Guide to the Flutter SDK & Flutter Framework for building native iOS and Android apps;2021-06-07 08:00:00;2021-06-25 12:00:00
+Complete Vue Mastery 2021 (w/ Vuex, Composition API, Router);Ultimate guide to Vue 3 Development! Build large scale applications and deploy to production. Go from Zero To Mastery!;2021-06-07 08:00:00;2021-06-25 12:00:00
+Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot;Learn to build distributed Event-driven Microservices, CQRS, Event Sourcing, SAGA, Transactions;2021-06-07 08:00:00;2021-06-25 12:00:00

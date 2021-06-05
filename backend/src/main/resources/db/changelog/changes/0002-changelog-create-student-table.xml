@@ -5,23 +5,20 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
     <changeSet id="0002-changelog-create-student-table" author="mike">
+        <comment>Creating Student Table</comment>
         <createTable tableName="student">
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_student"/>
             </column>
-            <column name="created_at" type="DATETIME">
+            <column name="first_name" type="VARCHAR(80)">
                 <constraints nullable="false"/>
             </column>
-            <column name="updated_at" type="DATETIME">
+            <column name="last_name" type="VARCHAR(80)">
                 <constraints nullable="false"/>
             </column>
-            <column name="first_name" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="last_name" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="mobile_number" type="VARCHAR(255)"/>
+            <column name="doc_number" type="VARCHAR(30)"/>
+            <column name="phone_number" type="VARCHAR(30)"/>
+            <column name="address" type="VARCHAR(255)"/>
             <column name="user_id" type="BIGINT"/>
         </createTable>
         <addForeignKeyConstraint baseTableName="student"

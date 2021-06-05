@@ -18,7 +18,6 @@ I'm using Spring Boot with Gradle.
 Technologies I am using:
 - Spring Boot v.2.5.0
 - LiquiBase
-- Jwt
 - PostgreSQL
 
 ### Docker
@@ -26,6 +25,10 @@ I also added a [docker-compose.yml](docker-compose.yml) in order to deploy the e
 
 Just run the following command on the root of this project:
 ```docker-compose up --build```
+
+### Considerations
+Due the time given to resolve the test:
+- I did not add security features (Authorization & Authentication) assuming that these mechanisms already exist in a real project. 
 
 ### About Me
 I’m an enthusiastic and passionate software developer willing to cope in any situation. Creative and always ready to learn something new.

@@ -1,21 +1,18 @@
 package com.ncoding.backend.student.domain;
 
-import com.ncoding.backend.audit.Audit;
 import lombok.*;
-import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.Objects;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Student extends Audit {
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -25,17 +22,29 @@ public class Student extends Audit {
     @NotNull
     @Column(name = "first_name", nullable = false)
     @NotBlank
-    @Size(max=255)
+    @Size(max=80)
     private String firstName;
 
     @NotNull
     @Column(name = "last_name", nullable = false)
     @NotBlank
-    @Size(max=255)
+    @Size(max=80)
     private String lastName;
 
-    @Column(name = "mobile_number")
-    private String mobileNumber;
+    @Column(name = "doc_number")
+    @NotBlank
+    @Size(max=30)
+    private String docNumber;
+
+    @Column(name = "phone_number")
+    @NotBlank
+    @Size(max=30)
+    private String phoneNumber;
+
+    @Column(name = "address")
+    @NotBlank
+    @Size(max=255)
+    private String address;
 
     @Column(name = "user_id")
     private Long userId;
@@ -45,17 +54,4 @@ public class Student extends Audit {
         return String.format("[%s] %s %s", id, firstName, lastName);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Student student = (Student) o;
-
-        return id != null && id.equals(student.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), id, userId);
-    }
 }

@@ -1,19 +1,21 @@
 package com.ncoding.backend.course.domain;
 
-import com.ncoding.backend.audit.Audit;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Getter
 @Setter
 @Entity
 @RequiredArgsConstructor
-public class Course extends Audit {
+public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -23,10 +25,20 @@ public class Course extends Audit {
     @NotNull
     @Column(name = "name", nullable = false)
     @NotBlank
+    @Max(80)
     private String name;
 
     @Column(name = "description")
+    @NotBlank
     private String description;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "start_date")
+    private Date startDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "end_date")
+    private Date endDate;
 
     @Column(name = "available")
     @NotNull
