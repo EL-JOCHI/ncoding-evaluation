@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 
 @SpringBootApplication()
 @OpenAPIDefinition(info = @Info(title = "NCoding Backend API",
-        description = "Exposes an API to perform actions on Courses, Students and Enrollments"))
+        description = "Exposes an API to perform actions on Courses, Students and Enrollments", version = "1.0.0"))
 public class BackendApplication {
 
     public static void main(String[] args) {

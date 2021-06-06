@@ -25,7 +25,7 @@ public class StudentController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "List all students",
                     content = {@Content(mediaType = "application/json",
-                            schema = @Schema(implementation = Course.class),
+                            schema = @Schema(implementation = Student.class),
                             examples = @ExampleObject(value = "{}"))})
     })
     @GetMapping("/students")
@@ -37,6 +37,12 @@ public class StudentController {
     @GetMapping("/students/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable long id) {
         return ResponseEntity.ok(studentService.getStudentById(id));
+    }
+
+    @Operation(summary = "Get A student by his User Id")
+    @GetMapping("/students/user/{userId}")
+    public ResponseEntity<Student> getStudentByUserId(@PathVariable long userId) {
+        return ResponseEntity.ok(studentService.getStudentByUserId(userId));
     }
 
     @Operation(summary = "Creates a new Student. Link a userId is optional.")

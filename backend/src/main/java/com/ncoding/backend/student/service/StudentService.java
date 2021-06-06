@@ -14,4 +14,6 @@ public interface StudentService<T> {
     T updateStudent(Long studentId, T student);
 
     ResponseEntity<?> deleteStudent(Long studentId);
+
+    T getStudentByUserId(long userId);
 }

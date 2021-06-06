@@ -69,4 +69,10 @@ public class StudentServiceImpl implements StudentService<Student> {
             return ResponseEntity.ok().build();
         }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
+
+    @Override
+    public Student getStudentByUserId(long userId) {
+        return studentRepository.findByUserId(userId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
 }

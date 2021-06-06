@@ -1,7 +1,5 @@
 package com.ncoding.backend.user.controller;
 
-import com.ncoding.backend.course.domain.Course;
-import com.ncoding.backend.student.domain.Student;
 import com.ncoding.backend.user.controller.request.UserRequest;
 import com.ncoding.backend.user.domain.User;
 import com.ncoding.backend.user.service.UserService;
@@ -16,7 +14,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
