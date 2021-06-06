@@ -1,10 +1,15 @@
 import { RouteRecordRaw } from 'vue-router';
+// import {useStore} from 'src/store';
+//
+// const store = useStore();
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/SingleLayout.vue'),
-    children: [{ path: '', component: () => import('pages/Index.vue') }],
+    children: [
+      { path: '', component: () => import('pages/Login.vue') },
+    ],
   },
 
   // Always leave this as last one,

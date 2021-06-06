@@ -17,7 +17,7 @@ import routes from './routes';
  * with the Router instance.
  */
 
-export default route<StateInterface>(function (/* { store, ssrContext } */) {
+export default route<StateInterface>(function ({ store}) {
   const createHistory = process.env.SERVER
     ? createMemoryHistory
     : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory);
@@ -34,5 +34,13 @@ export default route<StateInterface>(function (/* { store, ssrContext } */) {
     ),
   });
 
+  // Router.beforeEach((to, from, next) => {
+  //   if (to.matched.some(record => record.meta.requireAuth) && !store.getters['auth/isSignedIn']) {
+  //     next({ name: 'account-signin', query: { next: to.fullPath } })
+  //   } else {
+  //     next()
+  //   }
+  // })
+  console.log(store.state)
   return Router;
 });

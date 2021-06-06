@@ -56,12 +56,10 @@
 
 <script lang="ts">
 import { ref } from 'vue'
-import { useStore } from 'vuex';
 
 export default {
   name: 'UserLayout',
   setup () {
-    const store = useStore();
     const drawer = ref(false);
     return {
       drawer

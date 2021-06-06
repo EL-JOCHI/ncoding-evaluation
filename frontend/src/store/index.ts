@@ -7,6 +7,7 @@ import {
 } from 'vuex'
 
 import student from './module-student'
+import user from './module-user'
 
 /*
  * If not building with SSR mode, you can
@@ -21,7 +22,7 @@ export interface StateInterface {
   // Define your own store structure, using submodules if needed
   // example: ExampleStateInterface;
   // Declared as unknown to avoid linting issue. Best to strongly type as per the line above.
-  example: unknown
+  data: unknown
 }
 
 // provide typings for `this.$store`
@@ -37,7 +38,8 @@ export const storeKey: InjectionKey<VuexStore<StateInterface>> = Symbol('vuex-ke
 export default store(function (/* { ssrContext } */) {
   const Store = createStore<StateInterface>({
     modules: {
-      student
+      student,
+      user
     },
 
     // enable strict mode (adds overhead!)

@@ -55,10 +55,8 @@ public class UserController {
 
     @Operation(summary = "Gets the user if login was successful")
     @PostMapping("/users/login")
-    public ResponseEntity<User> doLogin(@RequestBody UserRequest userRequest, HttpServletRequest request) {
-        String appUrl = "http://" + request.getServerName() + ":" +
-                request.getServerPort() + request.getContextPath();
-        log.info(String.format("Request [%s] register new User: %s", appUrl, userRequest));
+    public ResponseEntity<User> doLogin(@RequestBody UserRequest userRequest) {
+        log.info(String.format("Attempt to login of User: %s", userRequest));
         return ResponseEntity.ok(userService.doLogin(userRequest));
     }
 

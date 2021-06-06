@@ -48,4 +48,12 @@ public class User implements Serializable {
     @Column(name = "last_login")
     private Date lastLogin;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", lastLogin=" + lastLogin +
+                '}';
+    }
 }
