@@ -39,9 +39,17 @@ public class CourseServiceImpl implements CourseService<Course> {
     public Course updateCourse(Long id, Course course) {
         log.info("updating course: "+ id);
         return courseRepository.findById(id).map(current -> {
-            current.setName(course.getName());
+            updateCourseData(current, course);
             return courseRepository.save(current);
         }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
+
+    private void updateCourseData(Course current, Course updated) {
+        current.setName(updated.getName());
+        current.setAvailable(updated.getAvailable());
+        current.setDescription(updated.getDescription());
+        current.setStartDate(updated.getStartDate());
+        current.setEndDate(updated.getEndDate());
     }
 
     @Override

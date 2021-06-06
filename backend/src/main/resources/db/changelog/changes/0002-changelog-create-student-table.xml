@@ -26,6 +26,6 @@
                                  constraintName="fk_student_user_id"
                                  referencedTableName="user"
                                  referencedColumnNames="id"
-                                 onDelete="CASCADE" />
+                                 onDelete="SET NULL" />
     </changeSet>
 </databaseChangeLog>

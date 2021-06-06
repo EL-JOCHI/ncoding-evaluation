@@ -28,7 +28,8 @@ Just run the following command on the root of this project:
 
 ### Considerations
 Due the time given to resolve the test:
-- I did not add security features (Authorization & Authentication) assuming that these mechanisms already exist in a real project. 
+- I did not add security features (Authorization & Authentication) assuming that these mechanisms already exist in a real project.
+- For easy testing I disable the basic authentication.
 
 ### About Me
 I’m an enthusiastic and passionate software developer willing to cope in any situation. Creative and always ready to learn something new.

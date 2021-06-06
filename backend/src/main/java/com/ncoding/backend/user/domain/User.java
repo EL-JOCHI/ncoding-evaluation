@@ -1,23 +1,28 @@
 package com.ncoding.backend.user.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.ncoding.backend.user.controller.request.UserRequest;
+import lombok.*;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.encrypt.Encryptors;
+import org.springframework.security.crypto.keygen.KeyGenerators;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Date;
 
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class User {
+@Table(name = "`user`")
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -31,11 +36,13 @@ public class User {
     @Size(max = 50)
     private String email;
 
+    @JsonIgnore
     @NotNull
     @Column(name = "password", nullable = false)
     @NotBlank
-    @Size(max = 50)
+    @Size(max = 255)
     private String password;
+
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "last_login")

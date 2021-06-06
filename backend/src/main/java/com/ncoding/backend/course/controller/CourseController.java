@@ -28,8 +28,6 @@ public class CourseController {
                     content = {@Content(mediaType = "application/json",
                             schema = @Schema(implementation = Course.class),
                             examples = @ExampleObject(value = "{\n" +
-                                    "            \"createdAt\": \"2021-06-05T15:00:00.000+00:00\",\n" +
-                                    "            \"updatedAt\": \"2021-06-05T15:00:00.000+00:00\",\n" +
                                     "            \"id\": 1,\n" +
                                     "            \"name\": \"Java: First Steps\",\n" +
                                     "            \"description\": \"The OCP Oracle Certified Professional Java SE 11 Developer Complete Study Guide in an indispensable resource for anyone preparing for the certification exam.\",\n" +

@@ -1,15 +1,13 @@
 package com.ncoding.backend.enrollment.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor
